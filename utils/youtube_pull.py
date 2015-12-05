@@ -6,9 +6,6 @@
  import time  
  import re  
    
-   
-   
-   
  try:  
    # you should read these from a config file  
    conn = psycopg2.connect(host='localhost', database='databae_name', user='user', password='pass')  

@@ -18,7 +18,3 @@ def view():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-=======
-#hi
->>>>>>> 3205c6b6636df386872d179d707b8c628da9b584
