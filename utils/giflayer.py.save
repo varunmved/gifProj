@@ -1,0 +1,34 @@
+import hmac
+import hashlib
+import urllib
+ 
+def giflayer(access_key, url, args):
+    
+    # encode URL
+    query = urllib.urlencode(dict(url=url, **args))
+ 
+    return "http://apilayer.net/api/capture?access_key=%s&%s" % (access_key, query)
+
+def defaultParams():
+    
+    # set optional parameters (leave blank if unused)
+    params = {
+        'start': '',
+        'end': '',
+        'duration': '',
+        'size': '',
+        'crop': '',
+        'fps': '',
+        'trailer': '',
+        'export': ''
+    };
+    
+    return params
+
+params = defaultParams()
+
+# set your access key and video URL 
+access_key = "1d4d71825fe149f5a6dfc3c86b405821"
+url = "https://www.youtube.com/watch?v=8rSH8-pbHZ0"
+
+print giflayer (access_key, url, params)

@@ -1,0 +1,21 @@
+import re
+
+def timesInComment(comment, maxTime):
+  split = comment.split()
+  times = []
+  r = re.compile('[[\d]{1,2}:]{1,2}\d\d')
+  for word in split:
+    if (r.match(word)):
+      times.append(word)
+  return times
+
+def formatTime(timeString):
+  if (len(timeString) == 4):
+    return formatTime('0' + timeString)
+  if (len(timeString) == 5):
+    return formatTime(':' + timeString)
+  if (len(timeString) == 6):
+    return ('0' + timeString)
+  return timeString
+
+print timesInComment("01:12:12 asdfasdf 4:5  1:13:40", "")
