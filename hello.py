@@ -6,6 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     return 'Hello World!'
+<<<<<<< HEAD
 
 @app.route('/hello')
 def hello2():
@@ -18,3 +19,6 @@ def view():
 if __name__ == "__main__":
     app.run(debug=True)
 
+=======
+#hi
+>>>>>>> 3205c6b6636df386872d179d707b8c628da9b584
